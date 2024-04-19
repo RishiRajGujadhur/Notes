@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  # ASP.NET Core Web API
+  api:
+    build: . 
+    ports:
+      - "8080:8080" 
+  # React Frontend
+  frontend:
+    build: ./my-notes-app
+    ports:
+      - "3000:80" 
+    volumes:
+      - ./my-notes-app:/app # Correct the volume path if necessary
+
+volumes:
+  api-data: 
