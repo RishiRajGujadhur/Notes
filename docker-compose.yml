@@ -8,11 +8,11 @@ services:
       - "8080:8080" 
   # React Frontend
   frontend:
-    build: ./my-notes-app
+    build: ./client
     ports:
-      - "3000:80" 
+      - "3000:80"
     volumes:
-      - ./my-notes-app:/app # Correct the volume path if necessary
+      - ./client:/app # Correct the volume path if necessary
 
 volumes:
   api-data: 
